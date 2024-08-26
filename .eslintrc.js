@@ -50,7 +50,7 @@ module.exports = {
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
         'linebreak-style': 0,
-        'no-unused-expressions': 'off',
+        'no-unused-expressions': 'off'
     },
     globals: {
         __IS_DEV__: true,
