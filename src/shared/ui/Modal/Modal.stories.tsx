@@ -26,4 +26,4 @@ Dark.args = {
     isOpen: true,
     children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde impedit a eum nulla similique dolorem asperiores repellat quia aliquam minus?',
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
