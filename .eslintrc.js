@@ -50,12 +50,10 @@ module.exports = {
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
-        'linebreak-style': 0,
-        'no-unused-expressions': 'off',
-        'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'error',
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies,
         'no-param-reassign': 'off',
     },
     globals: {

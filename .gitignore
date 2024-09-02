@@ -1,6 +1,5 @@
 /build
 node_modules
-.zSnip.tsx
 .idea
 /storybook-static
 .loki/report.html

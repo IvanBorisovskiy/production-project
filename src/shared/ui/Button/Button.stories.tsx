@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
 import { Button, ButtonSize, ButtonTheme } from './Button';
 
 export default {
@@ -65,8 +65,8 @@ BackgroundTheme.args = {
     theme: ButtonTheme.BACKGROUND,
 };
 
-export const backgroundInverted = Template.bind({});
-backgroundInverted.args = {
+export const BackgroundInverted = Template.bind({});
+BackgroundInverted.args = {
     children: 'Text',
     theme: ButtonTheme.BACKGROUND_INVERTED,
 };

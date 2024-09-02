@@ -26,9 +26,9 @@
 
 .items {
     margin-top: 20px;
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
 }
 
 .item {
@@ -60,7 +60,7 @@
 
     .link {
         opacity: 0;
-        transition: 200ms;
+        transition: 0.2s opacity;
         width: 0;
     }
 }
