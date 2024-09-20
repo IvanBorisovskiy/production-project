@@ -21,12 +21,9 @@ Light.args = {};
 Light.decorators = [StoreDecorator({
 
 })];
-
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-
-})];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 
 export const AuthNavbar = Template.bind({});
 AuthNavbar.args = {};

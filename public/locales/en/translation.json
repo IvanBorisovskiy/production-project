@@ -3,12 +3,14 @@
   "Перевод": "Translate",
   "Главная страница": "Main page",
   "Язык": "English",
+  "новый перевод": "новый перевод",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error has occurred",
   "Обновить страницу": "Reload page",
   "throw error": "throw error",
   "Главная": "Main",
   "О сайте": "About us",
+  "Переключить": "Переключить",
   "Короткий язык": "En",
   "Войти": "Login",
   "increment": "increment",
@@ -17,5 +19,5 @@
   "Введите пароль": "Enter password",
   "Форма авторизации": "Auth form",
   "Вы ввели неверный логин или пароль": "Uncorrect username or password",
-  "Выйти": "Exit"
+  "Выйти": "Выйти"
 }

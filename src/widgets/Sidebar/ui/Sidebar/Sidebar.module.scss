@@ -6,13 +6,6 @@
     transition: width 0.3s;
 }
 
-.items {
-    margin-top: 20px;
-    margin-left: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
 .switchers {
     position: absolute;
     bottom: 20px;
@@ -29,6 +22,13 @@
     position: absolute;
     right: -32px;
     bottom: 32px;
+}
+
+.items {
+    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .collapsed {
