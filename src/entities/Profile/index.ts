@@ -1,6 +1,5 @@
 export {
-// eslint-disable-next-line indent
-Profile,
+    Profile,
     ProfileSchema,
 } from './model/types/profile';
 
