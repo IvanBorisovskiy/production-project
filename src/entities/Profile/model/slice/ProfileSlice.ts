@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData';
 import { Profile, ProfileSchema } from '../types/profile';
+import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 
 const initialState: ProfileSchema = {
@@ -17,19 +17,15 @@ export const profileSlice = createSlice({
         setReadonly: (state, action: PayloadAction<boolean>) => {
             state.readonly = action.payload;
         },
+        cancelEdit: (state) => {
+            state.readonly = true;
+            state.form = state.data;
+        },
         updateProfile: (state, action: PayloadAction<Profile>) => {
             state.form = {
                 ...state.form,
                 ...action.payload,
             };
-        },
-        cancelEdit: (state) => {
-            state.readonly = true;
-            state.form = state.data;
-        },
-        onSaveEdit: (state) => {
-            state.readonly = true;
-            state.data = state.form;
         },
     },
     extraReducers: (builder) => {
@@ -59,9 +55,9 @@ export const profileSlice = createSlice({
                 action: PayloadAction<Profile>,
             ) => {
                 state.isLoading = false;
-                state.readonly = true;
                 state.data = action.payload;
                 state.form = action.payload;
+                state.readonly = true;
             })
             .addCase(updateProfileData.rejected, (state, action) => {
                 state.isLoading = false;
@@ -70,5 +66,6 @@ export const profileSlice = createSlice({
     },
 });
 
+// Action creators are generated for each case reducer function
 export const { actions: profileActions } = profileSlice;
 export const { reducer: profileReducer } = profileSlice;

@@ -7,17 +7,17 @@
     margin-top: 10px;
 }
 
-.loading, 
+.loading,
 .error {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 169px;
+    height: 300px;
 }
 
 .avatarWrapper {
     display: flex;
-    align-items: center;
+    width: 100%;
     justify-content: center;
 }
 

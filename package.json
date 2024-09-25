@@ -20,7 +20,8 @@
     "test:ui:json": "node scripts/generate-visual-json-report.js",
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
-    "storybook:build": "build-storybook -c ./config/storybook"
+    "storybook:build": "build-storybook -c ./config/storybook",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -63,10 +64,11 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "json-server": "^0.17.0",
-    "loki": "^0.35.1",
+    "loki": "^0.28.1",
     "mini-css-extract-plugin": "^2.5.3",
     "reg-cli": "^0.17.6",
     "regenerator-runtime": "^0.13.9",
@@ -98,14 +100,12 @@
   "loki": {
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "width": 1366,
-        "height": 768,
-        "deviceScaleFactor": 1,
-        "mobile": false
+        "height": 768
       },
       "chrome.iphone7": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "preset": "iPhone 7"
       }
     }
