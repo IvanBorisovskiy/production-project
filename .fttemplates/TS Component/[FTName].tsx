@@ -10,6 +10,7 @@ export const [FTName] = (props: [FTName]Props) => {
     const {
         className,
     } = props;
+
     const { t } = useTranslation();
 
     return (
