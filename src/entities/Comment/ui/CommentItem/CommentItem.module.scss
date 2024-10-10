@@ -1,6 +1,6 @@
 .commentItem {
-	padding: 10px;
-    border: 1px solid var(--primary-color); 
+    padding: 10px;
+    border: 1px solid var(--primary-color);
 }
 
 .header {
@@ -18,4 +18,8 @@
 
 .avatar {
     object-fit: cover;
+}
+
+.loading {
+    border: none;
 }

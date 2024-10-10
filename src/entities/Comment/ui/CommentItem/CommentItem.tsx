@@ -1,8 +1,10 @@
 import { memo } from 'react';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Text } from 'shared/ui/Text/Text';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { Text } from 'shared/ui/Text/Text';
 import { Comment } from '../../model/types/comment';
 import cls from './CommentItem.module.scss';
 
@@ -21,7 +23,7 @@ export const CommentItem = memo((props: CommentItemProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.commentItem, {}, [className])}>
+            <div className={classNames(cls.commentItem, {}, [className, cls.loading])}>
                 <div className={cls.header}>
                     <Skeleton
                         border="50%"
@@ -43,9 +45,11 @@ export const CommentItem = memo((props: CommentItemProps) => {
         );
     }
 
+    if (!comment) return null;
+
     return (
         <div className={classNames(cls.commentItem, {}, [className])}>
-            <div className={cls.header}>
+            <AppLink to={`${RoutePath.profile}${comment?.user.id}`} className={cls.header}>
                 {comment?.user.avatar
                 && (
                     <Avatar
@@ -55,7 +59,7 @@ export const CommentItem = memo((props: CommentItemProps) => {
                     />
                 )}
                 <Text className={cls.username} title={comment?.user.username} />
-            </div>
+            </AppLink>
             <Text className={cls.text} text={comment?.text} />
         </div>
     );

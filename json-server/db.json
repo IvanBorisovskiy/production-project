@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,30 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asd",
+      "id": "RHEp-X_"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asd123",
+      "id": "MA4duNq"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asd",
+      "id": "GQSumOb"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "123123123123",
+      "id": "FRJKOgo"
     }
   ],
   "users": [
@@ -108,24 +134,38 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
+      "avatar": "https://icons.veryicon.com/png/o/miscellaneous/two-color-icon-library/user-286.png"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 20,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://icons.veryicon.com/png/o/miscellaneous/two-color-icon-library/user-286.png"
+    },
+    {
+      "id": "2",
+      "first": "abcsad",
+      "lastname": "asdasd",
+      "age": 22123,
+      "currency": "EUR",
+      "country": "Belarus",
+      "city": "Moscowasd",
+      "username": "user123asd",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+    }
+  ]
 }
