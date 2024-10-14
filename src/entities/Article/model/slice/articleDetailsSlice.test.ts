@@ -9,6 +9,11 @@ const data: Article = {
     subtitle: 'asd',
     img: 'asd',
     createdAt: 'asd',
+    user: {
+        id: '1',
+        username: 'Ivan',
+        avatar: 'https://icons.veryicon.com/png/o/miscellaneous/two-color-icon-library/user-286.png',
+    },
     type: [ArticleType.IT],
     views: 123,
     blocks: [{

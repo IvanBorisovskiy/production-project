@@ -1,3 +1,8 @@
+/* eslint-disable max-len */
+import { ArticleList } from 'entities/Article';
+import {
+    Article, ArticleBlockType, ArticleType, ArticleView,
+} from 'entities/Article/model/types/article';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -16,7 +21,10 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     return (
         <div className={classNames(cls.articlesPage, {}, [className])}>
-            {t('ARTICLES')}
+            <ArticleList
+                view={ArticleView.BIG}
+                articles={[]}
+            />
         </div>
     );
 };

@@ -58,6 +58,7 @@ module.exports = {
         'no-undef': 'off',
         'linebreak-style': 'off',
         'i18next/no-literal-string': 'off',
+        'react/no-array-index-key': 'off'
     },
     globals: {
         __IS_DEV__: true,
