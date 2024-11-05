@@ -35,7 +35,6 @@ export const CountrySelect = memo(({
             items={options}
             readonly={readonly}
             value={value}
-            direction="top"
             label={t('Укажите страну')}
         />
     );
