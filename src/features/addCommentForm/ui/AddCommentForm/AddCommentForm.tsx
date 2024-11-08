@@ -7,7 +7,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { HStack } from 'shared/ui/Stack';
-import { getCommentFormError, getCommentFormText } from '../../model/selectors/addCommentFormSelectors';
+import { getCommentFormText } from '../../model/selectors/addCommentFormSelectors';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slice/addCommentFormSlice';
 import cls from './AddCommentForm.module.scss';
 
@@ -29,7 +29,6 @@ const AddCommentForm = (props: AddCommentFormProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const text = useSelector(getCommentFormText);
-    const error = useSelector(getCommentFormError);
 
     const onCommentTextChange = useCallback((value: string) => {
         dispatch(addCommentFormActions.setText(value));

@@ -23,7 +23,7 @@ export const CommentList = memo((props: CommentListProps) => {
 
     if (isLoading) {
         return (
-            <VStack gap="16" max className={classNames('', {}, [className])}>
+            <VStack className={classNames('', {}, [className])}>
                 <CommentItem
                     isLoading
                 />

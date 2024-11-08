@@ -2,9 +2,8 @@ import { Menu } from '@headlessui/react';
 import { Fragment, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
-import { HStack } from '../Stack';
-import cls from './Dropdown.module.scss';
 import { AppLink } from '../AppLink/AppLink';
+import cls from './Dropdown.module.scss';
 
 export interface DropdownItem {
     disabled?: boolean;
@@ -38,7 +37,7 @@ export const Dropdown = (props: DropdownProps) => {
                 {trigger}
             </Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, optionsClasses)}>
-                {items.map((item) => {
+                {items.map((item, index) => {
                     const content = ({ active }: {active: boolean}) => (
                         <button
                             className={classNames(cls.item, { [cls.active]: active }, [])}
@@ -52,14 +51,23 @@ export const Dropdown = (props: DropdownProps) => {
 
                     if (item.href) {
                         return (
-                            <Menu.Item as={AppLink} to={item.href} disabled={item.disabled}>
+                            <Menu.Item
+                                key={index}
+                                as={AppLink}
+                                to={item.href}
+                                disabled={item.disabled}
+                            >
                                 {content}
                             </Menu.Item>
                         );
                     }
 
                     return (
-                        <Menu.Item as={Fragment} disabled={item.disabled}>
+                        <Menu.Item
+                            key={index}
+                            as={Fragment}
+                            disabled={item.disabled}
+                        >
                             {content}
                         </Menu.Item>
                     );

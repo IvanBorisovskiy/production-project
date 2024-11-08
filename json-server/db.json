@@ -601,6 +601,12 @@
       "userId": "1",
       "text": "asdasdas",
       "id": "PH-SNKV"
+    },
+    {
+      "articleId": "18",
+      "userId": "2",
+      "text": "dsadas",
+      "id": "6ApANNp"
     }
   ],
   "users": [
@@ -633,13 +639,13 @@
     },
     {
       "id": "2",
-      "first": "ulbi tv",
-      "lastname": "asf",
-      "age": 465,
-      "currency": "RUB",
-      "country": "Russia",
-      "city": "Moscow",
-      "username": "ulbi tv",
+      "first": "asd",
+      "lastname": "asd",
+      "age": 10,
+      "currency": "EUR",
+      "country": "Armenia",
+      "city": "dsa",
+      "username": "",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ]
