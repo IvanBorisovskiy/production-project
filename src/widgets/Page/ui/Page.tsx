@@ -44,7 +44,7 @@ export const Page = (props: PageProps) => {
             url: pathname,
             position: e.currentTarget.scrollTop,
         }));
-    }, 500);
+    }, 100);
 
     useInitialEffect(() => {
         wrapperRef.current.scrollTop = scrollPosition;
