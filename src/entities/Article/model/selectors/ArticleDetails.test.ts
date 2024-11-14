@@ -4,7 +4,7 @@ import {
     getArticleDetailsIsLoading,
     getArticleDetailsError,
 } from './ArticleDetails';
-import { ArticleBlockType, ArticleType } from '../types/article';
+import { ArticleBlockType, ArticleType } from '../consts/articleConsts';
 
 describe('getProfileData.test', () => {
     test('getData', () => {
