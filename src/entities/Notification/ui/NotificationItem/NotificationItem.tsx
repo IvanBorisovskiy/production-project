@@ -35,7 +35,6 @@ export const NotificationItem = memo((props: NotificationItemProps) => {
             >
                 {content}
             </a>
-
         );
     }
 

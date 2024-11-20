@@ -17,3 +17,7 @@
     color: var(--primary-color);
     cursor: pointer;
 }
+
+.active {
+    background: var(--inverted-primary-color);
+}

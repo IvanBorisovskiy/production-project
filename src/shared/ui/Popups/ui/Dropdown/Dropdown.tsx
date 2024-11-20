@@ -40,7 +40,7 @@ export const Dropdown = (props: DropdownProps) => {
                 {items.map((item, index) => {
                     const content = ({ active }: {active: boolean}) => (
                         <button
-                            className={classNames(cls.item, { [popupCls.active]: active }, [])}
+                            className={classNames(cls.item, { [cls.active]: active }, [])}
                             onClick={item.onClick}
                             type="button"
                             disabled={item.disabled}
