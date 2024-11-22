@@ -1,16 +1,16 @@
 import { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import EyeIcon from 'shared/assets/icons/ant-design_eye-outlined.svg';
-import CalendarIcon from 'shared/assets/icons/clarity_date-line.svg';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Icon } from 'shared/ui/Icon/Icon';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
-import { HStack, VStack } from 'shared/ui/Stack';
-import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
+import EyeIcon from '@/shared/assets/icons/ant-design_eye-outlined.svg';
+import CalendarIcon from '@/shared/assets/icons/clarity_date-line.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
 import { ArticleBlockType } from '../../model/consts/articleConsts';
 import {
     getArticleDetailsData,

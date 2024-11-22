@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import NotificationIcon from 'shared/assets/icons/Vector-5.svg';
+import NotificationIcon from '@/shared/assets/icons/Vector-5.svg';
 import { Button, ButtonTheme } from '../../../Button/Button';
 import { Card, CardTheme } from '../../../Card/Card';
 import { Icon } from '../../../Icon/Icon';
