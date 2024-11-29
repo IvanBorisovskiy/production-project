@@ -729,11 +729,11 @@
   "profile": [
     {
       "id": "1",
-      "first": "sad",
-      "lastname": "asd",
-      "age": 1214,
-      "currency": "EUR",
-      "country": "Kazahstan",
+      "first": "timur",
+      "lastname": "ulbi",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
       "avatar": "https://yt3.ggpht.com/ytc/AKedOLTYUJxG8Hu036PQ_TXpMLq2fG8Kj8NZI4h0lbn_3g=s900-c-k-c0x00ffffff-no-rj"
@@ -748,6 +748,99 @@
       "city": "Moscow",
       "username": "ulbi tv",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "I7ofk1u"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 5,
+      "feedback": "asdasdasdasd",
+      "id": "Y7MhPzo"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "отстой",
+      "id": "II0a75O"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 3,
+      "feedback": "",
+      "id": "bcPnbbZ"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "rate": 4,
+      "id": "nu4qUYv"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "rate": 5,
+      "feedback": "FKDSD",
+      "id": "VwfFpYn"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "rate": 5,
+      "id": "x0nOQ85"
+    },
+    {
+      "articleId": "11",
+      "userId": "1",
+      "rate": 5,
+      "feedback": "Good!",
+      "id": "P9H2841"
+    },
+    {
+      "articleId": "12",
+      "userId": "1",
+      "rate": 5,
+      "feedback": "sads",
+      "id": "sEnB0eY"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
     }
   ]
 }
