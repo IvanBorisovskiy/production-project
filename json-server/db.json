@@ -832,15 +832,15 @@
       "id": "1",
       "rate": 4,
       "feedback": "Хорошая статья",
-      "userId": "1",
+      "userId": "3",
       "profileId": "1"
     },
     {
-      "id": "2",
+      "profileId": "2",
       "rate": 4,
-      "feedback": "Хорошая статья",
       "userId": "1",
-      "profileId": "2"
+      "feedback": "Хороший профиль",
+      "id": "zFyl09F"
     }
   ]
 }
