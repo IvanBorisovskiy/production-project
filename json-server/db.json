@@ -729,10 +729,10 @@
   "profile": [
     {
       "id": "1",
-      "first": "timur",
-      "lastname": "ulbi",
+      "first": "asd",
+      "lastname": "asd",
       "age": 465,
-      "currency": "RUB",
+      "currency": "EUR",
       "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
