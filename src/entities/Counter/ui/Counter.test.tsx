@@ -5,14 +5,14 @@ import { Counter } from './Counter';
 
 describe('Counter', () => {
     test('test render', () => {
-        componentRender(<Counter />, {
+        componentRender(<Counter PayloadNumber={10} />, {
             initialState: { counter: { value: 10 } },
         });
         expect(screen.getByTestId('value-title')).toHaveTextContent('10');
     });
 
     test('increment', () => {
-        componentRender(<Counter />, {
+        componentRender(<Counter PayloadNumber={10} />, {
             initialState: { counter: { value: 10 } },
         });
         userEvent.click(screen.getByTestId('increment-btn'));
@@ -20,7 +20,7 @@ describe('Counter', () => {
     });
 
     test('decrement', () => {
-        componentRender(<Counter />, {
+        componentRender(<Counter PayloadNumber={10} />, {
             initialState: { counter: { value: 10 } },
         });
         userEvent.click(screen.getByTestId('decrement-btn'));
