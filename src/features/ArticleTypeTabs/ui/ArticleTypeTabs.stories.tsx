@@ -1,8 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ArticleTypeTabs } from './ArticleTypeTabs';
+import { ArticleType } from '@/entities/Article';
 
 export default {
-    title: 'entities/Article/ArticleTypeTabs',
+    title: 'features/Article/ArticleTypeTabs',
     component: ArticleTypeTabs,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -12,4 +13,6 @@ export default {
 const Template: ComponentStory<typeof ArticleTypeTabs> = (args) => <ArticleTypeTabs {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = {
+    value: ArticleType.ALL,
+};
