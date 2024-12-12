@@ -4,6 +4,7 @@ import EyeIcon from '@/shared/assets/icons/ant-design_eye-outlined.svg';
 import { getRouteArticleDetails } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useHover } from '@/shared/lib/hooks/useHover/useHover';
+import { AppImage } from '@/shared/ui/AppImage';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
@@ -20,6 +21,7 @@ import {
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 interface ArticleListItemProps {
     className?: string;
@@ -60,7 +62,14 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     </div>
                     <Text title={article.title} className={cls.title} />
                     {types}
-                    <img src={article.img} className={cls.img} alt={article.title} />
+                    <AppImage
+                        fallback={
+                            <Skeleton width="100%" height={250} />
+                        }
+                        src={article.img}
+                        className={cls.img}
+                        alt={article.title}
+                    />
                     {textBlocks && (
                         <ArticleTextBlockComponent block={textBlocks} className={cls.textBlock} />
                     )}
@@ -89,7 +98,14 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         >
             <Card>
                 <div className={cls.imageWrapper}>
-                    <img src={article.img} alt={article.title} className={cls.img} />
+                    <AppImage
+                        fallback={
+                            <Skeleton width={200} height={200} />
+                        }
+                        src={article.img}
+                        alt={article.title}
+                        className={cls.img}
+                    />
                     <Text text={article.createdAt} className={cls.date} />
                 </div>
                 <div className={cls.infoWrapper}>
