@@ -29,6 +29,9 @@
     "update:imports": "ts-node ./scripts/updateImports.ts",
     "shared:public:api": "ts-node ./scripts/refactoring/createPublicApiForSharedUI.ts"
   },
+  "lint-staged": {
+    "**/*.{ts,tsx}": "eslint"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -87,6 +90,7 @@
     "jest": "^27.5.1",
     "jest-html-reporters": "^3.0.10",
     "json-server": "^0.17.0",
+    "lint-staged": "^13.0.3",
     "loki": "^0.35.1",
     "mini-css-extract-plugin": "^2.5.3",
     "react-refresh": "^0.12.0",
