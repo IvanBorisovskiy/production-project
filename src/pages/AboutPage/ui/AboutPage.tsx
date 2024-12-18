@@ -7,6 +7,7 @@ const AboutPage = () => {
     return (
         <Page data-testid="AboutPage">
             {t('О сайте')}
+            ads
         </Page>
     );
 };
