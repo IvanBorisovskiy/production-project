@@ -738,10 +738,10 @@
   "profile": [
     {
       "id": "1",
-      "first": "asd",
-      "lastname": "asd",
+      "first": "timur",
+      "lastname": "ulbi",
       "age": 465,
-      "currency": "EUR",
+      "currency": "RUB",
       "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
@@ -749,13 +749,24 @@
     },
     {
       "id": "2",
-      "first": "ulbi tv",
-      "lastname": "asf",
+      "first": "asd",
+      "lastname": "asd",
+      "age": 20,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Taishet",
+      "username": "asd",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "4",
+      "first": "test",
+      "lastname": "user",
       "age": 465,
       "currency": "EUR",
       "country": "Ukraine",
       "city": "Moscow",
-      "username": "ulbi tv",
+      "username": "testuser",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
@@ -801,39 +812,6 @@
       "rate": 3,
       "feedback": "",
       "id": "bcPnbbZ"
-    },
-    {
-      "articleId": "4",
-      "userId": "1",
-      "rate": 4,
-      "id": "nu4qUYv"
-    },
-    {
-      "articleId": "8",
-      "userId": "1",
-      "rate": 5,
-      "feedback": "FKDSD",
-      "id": "VwfFpYn"
-    },
-    {
-      "articleId": "6",
-      "userId": "1",
-      "rate": 5,
-      "id": "x0nOQ85"
-    },
-    {
-      "articleId": "11",
-      "userId": "1",
-      "rate": 5,
-      "feedback": "Good!",
-      "id": "P9H2841"
-    },
-    {
-      "articleId": "12",
-      "userId": "1",
-      "rate": 5,
-      "feedback": "sads",
-      "id": "sEnB0eY"
     }
   ],
   "profile-ratings": [
@@ -841,15 +819,15 @@
       "id": "1",
       "rate": 4,
       "feedback": "Хорошая статья",
-      "userId": "3",
+      "userId": "1",
       "profileId": "1"
     },
     {
-      "profileId": "2",
+      "id": "2",
       "rate": 4,
+      "feedback": "Хорошая статья",
       "userId": "1",
-      "feedback": "Хороший профиль",
-      "id": "zFyl09F"
+      "profileId": "2"
     }
   ]
 }

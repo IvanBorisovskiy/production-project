@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import EyeIcon from '@/shared/assets/icons/ant-design_eye-outlined.svg';
 import { getRouteArticleDetails } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { useHover } from '@/shared/lib/hooks/useHover/useHover';
 import { AppImage } from '@/shared/ui/AppImage';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Avatar } from '@/shared/ui/Avatar';
@@ -39,7 +38,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     } = props;
 
     const { t } = useTranslation();
-    const [isHover, bindHover] = useHover();
 
     const types = <Text text={article.type.join(', ')} className={cls.types} />;
     const views = (
@@ -53,7 +51,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         const textBlocks = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
 
         return (
-            <div className={classNames(cls.articleListItem, {}, [className, cls[view]])}>
+            <div
+                className={classNames(cls.articleListItem, {}, [className, cls[view]])}
+                data-testid={`ArticleListItem.${article.type}`}
+            >
                 <Card className={cls.card}>
                     <div className={cls.header}>
                         <Avatar size={30} src={article.user.avatar} alt={article.user.username} />
@@ -92,6 +93,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <AppLink
+            data-testid={`ArticleListItem.${article.type}`}
             target={target}
             className={classNames(cls.articleListItem, {}, [className, cls[view]])}
             to={getRouteArticleDetails(article.id)}
