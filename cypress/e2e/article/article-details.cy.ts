@@ -7,21 +7,26 @@ describe('Пользователь заходит на страницу стат
             cy.visit(`articles/${article.id}`);
         });
     });
+
     afterEach(() => {
         cy.removeArticle(currentArticleId);
     });
+
     it('И видит содержимое статьи', () => {
         cy.getByTestId('ArticleDetails.Info').should('exist');
     });
+
     it('И видит список рекоммендаций', () => {
         cy.getByTestId('ArticleDetails.Recommendations').should('exist');
     });
+
     it('И оставляет комментарий', () => {
         cy.getByTestId('ArticleDetails.Info');
         cy.getByTestId('Article.CommentForm').scrollIntoView();
         cy.addComment('text');
         cy.getByTestId('CommentItem.Content').should('have.length', 1);
     });
+
     it('И ставит оценку', () => {
         cy.getByTestId('ArticleDetails.Info');
         cy.getByTestId('RatingCard').scrollIntoView();
