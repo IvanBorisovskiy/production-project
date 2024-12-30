@@ -37,6 +37,7 @@ module.exports = {
             ignoreComments: true,
             code: 120,
         }],
+        'arrow-body-style': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error',
