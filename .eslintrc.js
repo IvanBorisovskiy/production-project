@@ -49,6 +49,7 @@ module.exports = {
         'linebreak-style': 'off',
         'i18next/no-literal-string': 'off',
         'react/no-array-index-key': 'off',
+        'react/no-unstable-nested-components': 'warn',
         'ulbi-tv-plugin/path-checker': ['error', {
             alias: '@',
         }],
