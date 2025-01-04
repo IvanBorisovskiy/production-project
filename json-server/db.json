@@ -753,7 +753,12 @@
         "isArticleRatingEnabled": true,
         "isCounterEnabled": true
       },
-      "avatar": "https://mobimg.b-cdn.net/v3/fetch/22/2207633df03a819cd72889249c8361a8.jpeg?w=1470&r=0.5625"
+      "avatar": "https://mobimg.b-cdn.net/v3/fetch/22/2207633df03a819cd72889249c8361a8.jpeg?w=1470&r=0.5625",
+      "jsonSettings": {
+        "theme": "app_light_theme",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      }
     },
     {
       "id": "2",
@@ -885,14 +890,14 @@
     {
       "id": "1",
       "rate": 4,
-      "feedback": "Хорошая статья",
+      "feedback": "feedback",
       "userId": "1",
       "profileId": "1"
     },
     {
       "id": "2",
       "rate": 4,
-      "feedback": "Хорошая статья",
+      "feedback": "feedback2",
       "userId": "1",
       "profileId": "2"
     }

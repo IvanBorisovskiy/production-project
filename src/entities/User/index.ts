@@ -17,3 +17,8 @@ export {
 } from './model/selectors/roleSelectors';
 export { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthData';
 export { getUserInited } from './model/selectors/getUserInited/getUserInited';
+export {
+    useJsonSettings,
+} from './model/selectors/jsonSettings';
+export type { JsonSettings } from './model/types/jsonSettings';
+export { saveJsonSettings } from './model/services/saveJsonSettings';
