@@ -22,3 +22,4 @@ export {
 } from './model/selectors/jsonSettings';
 export type { JsonSettings } from './model/types/jsonSettings';
 export { saveJsonSettings } from './model/services/saveJsonSettings';
+export { initAuthData } from './model/services/initAuthData';
