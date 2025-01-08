@@ -28,7 +28,8 @@
     "prepare": "husky install",
     "generate:slice": "node ./scripts/createSlice/index.js",
     "update:imports": "ts-node ./scripts/updateImports.ts",
-    "shared:public:api": "ts-node ./scripts/refactoring/createPublicApiForSharedUI.ts"
+    "shared:public:api": "ts-node ./scripts/refactoring/createPublicApiForSharedUI.ts",
+    "remove-feature": "ts-node ./scripts/remove-feature.ts"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": "eslint"
