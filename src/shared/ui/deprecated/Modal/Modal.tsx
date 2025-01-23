@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';
 import { classNames, Mods } from '../../../lib/classNames/classNames';
-import { Overlay } from '../../deprecated/Overlay/Overlay';
-import { Portal } from '../Portal/Portal';
+import { Overlay } from '../../redesigned/Overlay/Overlay';
+import { Portal } from '../../redesigned/Portal/Portal';
 import cls from './Modal.module.scss';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
