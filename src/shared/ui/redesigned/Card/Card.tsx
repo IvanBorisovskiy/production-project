@@ -11,6 +11,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     variant?: CardVariant;
     maxWidth?: boolean;
     padding?: CardPadding;
+    border?: boolean;
 }
 
 export const Card = (props: CardProps) => {
@@ -20,11 +21,13 @@ export const Card = (props: CardProps) => {
         variant = 'normal',
         maxWidth,
         padding = '8',
+        border,
         ...otherProps
     } = props;
 
     const mods: Mods = {
         [cls.maxWidth]: maxWidth,
+        [cls.borderRound]: border,
     };
 
     return (
