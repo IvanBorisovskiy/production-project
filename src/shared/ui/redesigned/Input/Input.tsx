@@ -1,5 +1,6 @@
 import React, {
-    InputHTMLAttributes, memo, useEffect, useRef,
+    InputHTMLAttributes, memo, ReactElement, useEffect, useRef,
+    useState,
 } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
@@ -12,6 +13,8 @@ interface InputProps extends HTMLInputProps {
     onChange?: (value: string) => void;
     autofocus?: boolean;
     readonly?: boolean;
+    addonLeft?: ReactElement;
+    addonRight?: ReactElement;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -23,9 +26,13 @@ export const Input = memo((props: InputProps) => {
         placeholder,
         autofocus,
         readonly,
+        addonLeft,
+        addonRight,
         ...otherProps
     } = props;
+
     const ref = useRef<HTMLInputElement>(null);
+    const [isFocused, setIsFocused] = useState(false);
 
     useEffect(() => {
         if (autofocus) {
@@ -37,16 +44,29 @@ export const Input = memo((props: InputProps) => {
         onChange?.(e.target.value);
     };
 
+    const onFocus = () => {
+        setIsFocused(true);
+    };
+
+    const onBlur = () => {
+        setIsFocused(false);
+    };
+
     const mods: Mods = {
         [cls.readonly]: readonly,
+        [cls.focused]: isFocused,
+        [cls.withAddonLeft]: Boolean(addonLeft),
+        [cls.withAddonRight]: Boolean(addonRight),
     };
 
     return (
-        <div className={classNames(cls.Wrapper, mods, [className])}>
-            {placeholder && (
-                <div className={cls.placeholder}>
-                    {placeholder}
-                    :
+        <div
+            className={classNames(cls.InputWrapper, mods, [className])}
+        >
+            {addonLeft
+            && (
+                <div className={cls.addonLeft}>
+                    {addonLeft}
                 </div>
             )}
             <div className={cls.Input}>
@@ -55,11 +75,20 @@ export const Input = memo((props: InputProps) => {
                     type={type}
                     value={value}
                     onChange={onChangeHandler}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
                     className={cls.input}
                     readOnly={readonly}
+                    placeholder={placeholder}
                     {...otherProps}
                 />
             </div>
+            {addonRight
+            && (
+                <div className={cls.addonRight}>
+                    {addonRight}
+                </div>
+            )}
         </div>
     );
 });

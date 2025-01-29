@@ -14,6 +14,13 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     border?: boolean;
 }
 
+const CardPaddingMap: Record<CardPadding, string> = {
+    0: cls.padding_0,
+    8: cls.padding_8,
+    16: cls.padding_16,
+    24: cls.padding_24,
+};
+
 export const Card = (props: CardProps) => {
     const {
         className,
@@ -30,16 +37,15 @@ export const Card = (props: CardProps) => {
         [cls.borderRound]: border,
     };
 
+    const cardPadding = CardPaddingMap[padding];
+
     return (
         <div
             className={classNames(
                 cls.card,
                 mods,
-                [className, cls[variant]],
+                [cls[variant], cardPadding, className],
             )}
-            style={{
-                padding: `${padding}px`,
-            }}
             {...otherProps}
         >
             {children}

@@ -1,36 +1,36 @@
 .ArticleViewSelectorRedesigned {
-  width: 100px;
-  height: 52px;
-  background: var(--dark-bg-redesigned);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 32px;
-  padding: 3px;
+    width: 100px;
+    height: 52px;
+    background: var(--dark-bg-redesigned);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    padding: 3px;
 }
 
 .SelectedLeft {
-  background: var(--bg-redesigned);
-  border-radius: 32px 0 0 32px;
+    background: var(--bg-redesigned);
+    border-radius: 32px 0 0 32px;
 
-  .icon {
-    fill: var(--accent-redesigned);
-  }
+    .icon {
+        fill: var(--accent-redesigned);
+    }
 }
 
 .SelectedRight {
-  background: var(--bg-redesigned);
-  border-radius: 0 32px 32px 0;
+    background: var(--bg-redesigned);
+    border-radius: 0 32px 32px 0;
 
-  .icon {
-    fill: var(--accent-redesigned);
-  }
+    .icon {
+        fill: var(--accent-redesigned);
+    }
 }
 
 .iconWrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,23 +1,39 @@
 .card {
-  border-radius: 12px;
+    border-radius: 12px;
 }
 
 .normal {
-  background: var(--dark-bg-redesigned);
+    background: var(--dark-bg-redesigned);
 }
 
 .light {
-  background: var(--light-bg-redesigned);
+    background: var(--light-bg-redesigned);
 }
 
 .outlined {
-  border: 1px solid var(--accent-redesigned);
+    border: 1px solid var(--accent-redesigned);
+}
+
+.padding_0 {
+    padding: 0;    
+}
+
+.padding_8 {
+    padding: 8px;
+}
+
+.padding_16 {
+    padding: 16px;
+}
+
+.padding_24 {
+    padding: 24px;
 }
 
 .borderRound {
-  border-radius: 34px;
+    border-radius: 34px;
 }
 
 .maxWidth {
-  width: 100%;
+    width: 100%;
 }
