@@ -6,7 +6,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 32px;
-    padding: 3px;
+    padding: 2px;
+}
+
+.icon {
+    fill: var(--light-bg-redesigned);
 }
 
 .SelectedLeft {
@@ -14,7 +18,7 @@
     border-radius: 32px 0 0 32px;
 
     .icon {
-        fill: var(--accent-redesigned);
+        fill: var(--icon-redesigned);
     }
 }
 
@@ -23,7 +27,7 @@
     border-radius: 0 32px 32px 0;
 
     .icon {
-        fill: var(--accent-redesigned);
+        fill: var(--icon-redesigned);
     }
 }
 

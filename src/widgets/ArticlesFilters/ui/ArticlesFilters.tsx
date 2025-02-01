@@ -52,6 +52,7 @@ export const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
                     placeholder={t('Найти')}
                     onChange={onChangeSearch}
                     value={search}
+                    size="s"
                     addonLeft={(
                         <Icon
                             Svg={SearchIcon}

@@ -8,7 +8,20 @@
     width: 100%;
 }
 
-.addonLeft, .addonRight {
+.s {
+    height: 32px;
+}
+
+.m {
+    height: 38px;
+}
+
+.l {
+    height: 44px;
+}
+
+.addonLeft,
+.addonRight {
     display: flex;
 }
 
@@ -23,7 +36,8 @@
 .focused {
     border: 1px solid var(--accent-redesigned);
 
-    .addonLeft svg, .addonRight svg {
+    .addonLeft svg,
+    .addonRight svg {
         color: var(--accent-redesigned);
     }
 }
