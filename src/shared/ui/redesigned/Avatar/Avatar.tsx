@@ -3,8 +3,8 @@ import UserIcon from '@/shared/assets/icons/carbon_user-avatar-filled.svg';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 import { AppImage } from '../../redesigned/AppImage';
-import { Skeleton } from '../../deprecated/Skeleton';
 import { Icon } from '../Icon';
+import { Skeleton } from '../Skeleton';
 
 interface AvatarProps {
     className?: string;

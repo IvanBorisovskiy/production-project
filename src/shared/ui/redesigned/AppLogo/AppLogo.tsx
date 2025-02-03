@@ -15,24 +15,20 @@ export const AppLogo = memo((props: AppLogoProps) => {
         size = 50,
     } = props;
 
-    const style = {
-        width: size,
-        height: size,
-        color: 'black',
-    };
-
     return (
         <HStack
             max
             justify="center"
             className={classNames(cls.appLogoWrapper, {}, [className])}
         >
-            <div className={cls.gradientBig} />
-            <div className={cls.gradientSmall} />
             <AppSvg
                 className={cls.appLogo}
-                style={style}
+                width={size}
+                height={size}
+                color="black"
             />
+            <div className={cls.gradientBig} />
+            <div className={cls.gradientSmall} />
         </HStack>
     );
 });
