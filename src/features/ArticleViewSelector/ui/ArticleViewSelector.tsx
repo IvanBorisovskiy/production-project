@@ -62,15 +62,17 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
         >
             {viewTypes.map((viewType) => (
                 <ToggleFeaturesComponent
+                    key={viewType.view}
                     feature="isAppRedesigned"
                     on={(
-                        <div className={classNames(
-                            cls.iconWrapper,
-                            {
-                                [cls.SelectedLeft]: viewType.view === view && viewType.icon === ListIcon,
-                                [cls.SelectedRight]: viewType.view === view && viewType.icon === TiledIcon,
-                            },
-                        )}
+                        <div
+                            className={classNames(
+                                cls.iconWrapper,
+                                {
+                                    [cls.SelectedLeft]: viewType.view === view && viewType.icon === ListIcon,
+                                    [cls.SelectedRight]: viewType.view === view && viewType.icon === TiledIcon,
+                                },
+                            )}
                         >
                             <Icon
                                 clickable

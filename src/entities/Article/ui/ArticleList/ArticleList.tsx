@@ -7,6 +7,8 @@ import { Article } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import cls from './ArticleList.module.scss';
+import { ToggleFeaturesComponent } from '@/shared/lib/features';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 
 interface ArticleListProps {
     className?: string;
@@ -53,18 +55,40 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
-        <div
-            className={classNames(cls.articleList, {}, [className, cls[view]])}
-            data-testid="ArticleList"
-        >
-            {
-                articles?.length
-                    ? articles?.map(renderArticle)
-                    : null
-            }
-            {
-                isLoading && getSkeletons(view)
-            }
-        </div>
+        <ToggleFeaturesComponent
+            feature="isAppRedesigned"
+            on={(
+                <HStack
+                    gap="8"
+                    wrap="wrap"
+                    className={classNames(cls.articleListRedesigned, {}, [])}
+                    data-testid="ArticleList"
+                >
+                    {
+                        articles?.length
+                            ? articles?.map(renderArticle)
+                            : null
+                    }
+                    {
+                        isLoading && getSkeletons(view)
+                    }
+                </HStack>
+            )}
+            off={(
+                <div
+                    className={classNames(cls.articleList, {}, [className, cls[view]])}
+                    data-testid="ArticleList"
+                >
+                    {
+                        articles?.length
+                            ? articles?.map(renderArticle)
+                            : null
+                    }
+                    {
+                        isLoading && getSkeletons(view)
+                    }
+                </div>
+            )}
+        />
     );
 });
