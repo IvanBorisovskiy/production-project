@@ -1,9 +1,7 @@
-.title {
-    color: var(--text-redesigned);
-}
-
+.title,
 .text {
     color: var(--text-redesigned);
+    font-weight: 400;
 }
 
 .error {

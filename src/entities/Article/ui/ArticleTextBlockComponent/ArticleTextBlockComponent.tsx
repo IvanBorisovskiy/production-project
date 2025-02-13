@@ -1,8 +1,9 @@
 import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleTextBlockComponent.module.scss';
+import { ToggleFeaturesComponent } from '@/shared/lib/features';
 
 interface ArticleTextBlockComponentProps {
     className?: string;
@@ -16,16 +17,33 @@ export const ArticleTextBlockComponent = memo((props: ArticleTextBlockComponentP
     } = props;
 
     return (
-        <div className={classNames(cls.articleTextBlockComponent, {}, [className])}>
+        <div className={className}>
             {block.title && (
-                <Text title={block.title} className={cls.title} />
+                <ToggleFeaturesComponent
+                    feature="isAppRedesigned"
+                    on={<Text title={block.title} className={cls.title} />}
+                    off={<TextDeprecated title={block.title} className={cls.title} />}
+                />
             )}
             {block.paragraphs.map((paragraph) => (
-                <Text
-                    key={paragraph}
-                    className={cls.paragraph}
-                    text={paragraph}
-                    size={TextSize.M}
+                <ToggleFeaturesComponent
+                    feature="isAppRedesigned"
+                    on={(
+                        <Text
+                            key={paragraph}
+                            className={cls.paragraph}
+                            text={paragraph}
+                            size="m"
+                        />
+                    )}
+                    off={(
+                        <TextDeprecated
+                            key={paragraph}
+                            className={cls.paragraph}
+                            text={paragraph}
+                            size={TextSize.M}
+                        />
+                    )}
                 />
             ))}
         </div>

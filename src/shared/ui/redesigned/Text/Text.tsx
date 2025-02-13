@@ -50,12 +50,14 @@ export const Text = memo((props: TextProps) => {
     const HeaderTag = mapSizeToHeaderTag[size];
     const sizeClasses = mapSizeToClass[size];
 
-    const additionalClasses = [className, cls[variant], sizeClasses, cls[align]];
+    const additionalClasses = [className, cls[variant], cls[sizeClasses], cls[align]];
 
     return (
         <div className={classNames(
             cls.Text,
-            { [cls.bold]: bold },
+            {
+                [cls.bold]: bold,
+            },
             additionalClasses,
         )}
         >
