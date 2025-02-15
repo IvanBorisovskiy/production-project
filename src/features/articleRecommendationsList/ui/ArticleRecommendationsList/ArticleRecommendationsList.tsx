@@ -3,8 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { ArticleList } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
+import { ToggleFeaturesComponent } from '@/shared/lib/features';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 interface ArticleRecommendationsListProps {
     className?: string;
@@ -32,9 +34,20 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
             gap="8"
             className={classNames('', {}, [className])}
         >
-            <Text
-                size={TextSize.L}
-                title={t('Рекомендуем')}
+            <ToggleFeaturesComponent
+                feature="isAppRedesigned"
+                on={(
+                    <Text
+                        size="l"
+                        title={t('Рекомендуем')}
+                    />
+                )}
+                off={(
+                    <TextDeprecated
+                        size={TextSize.L}
+                        title={t('Рекомендуем')}
+                    />
+                )}
             />
             <ArticleList
                 articles={articles}
