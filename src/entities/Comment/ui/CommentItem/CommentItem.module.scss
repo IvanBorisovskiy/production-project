@@ -1,14 +1,19 @@
-.commentItem {
+.CommentCard {
     padding: 10px;
     border: 1px solid var(--primary-color);
 }
 
-.username {
-    margin-left: 10px;
+.commentItem {
+    overflow-wrap: anywhere;
 }
 
-.avatar {
-    object-fit: cover;
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    margin-left: 10px;
 }
 
 .loading {
