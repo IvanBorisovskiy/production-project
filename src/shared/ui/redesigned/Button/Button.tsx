@@ -5,6 +5,7 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
 export type ButtonVariant = 'clear' | 'outline' | 'filled';
+export type ButtonColor = 'success' | 'error';
 
 export type ButtonSize = 'm' | 'l' | 'xl'
 
@@ -13,6 +14,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     variant?: ButtonVariant;
     square?: boolean;
     size?: ButtonSize;
+    color?: ButtonColor;
     disabled?: boolean;
     children?: ReactNode;
     fullWidth?: boolean;
@@ -28,6 +30,7 @@ export const Button = memo((props: ButtonProps) => {
         square,
         disabled,
         size = 'm',
+        color,
         fullWidth,
         addonLeft,
         addonRight,
@@ -42,10 +45,17 @@ export const Button = memo((props: ButtonProps) => {
         [cls.withAddonRight]: Boolean(addonRight),
     };
 
+    const additionalCls = [
+        className,
+        cls[variant],
+        cls[size],
+        color && cls[color],
+    ];
+
     return (
         <button
             type="button"
-            className={classNames(cls.Button, mods, [className, cls[variant], cls[size]])}
+            className={classNames(cls.Button, mods, additionalCls)}
             disabled={disabled}
             {...otherProps}
         >

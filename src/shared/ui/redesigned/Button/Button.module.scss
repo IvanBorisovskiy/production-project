@@ -46,6 +46,14 @@
     border: none;
     outline: none;
     border-radius: 34px;
+
+    &.success {
+        background: var(--save-redesigned);
+    }
+    
+    &.error {
+        background: var(--cancel-redesigned);
+    }
 }
 
 .outline {
@@ -55,6 +63,22 @@
 
     &:hover {
         border: 1px solid var(--accent-redesigned);
+
+        &.success {
+            border: 1px solid var(--accent-redesigned);
+        }
+        
+        &.error {
+            border: 1px solid var(--accent-redesigned);
+        }
+    }
+    
+    &.success {
+        border: 1px solid var(--save-redesigned);
+    }
+    
+    &.error {
+        border: 1px solid var(--cancel-redesigned);
     }
 }
 

@@ -10,11 +10,12 @@ import { NotificationButton } from '@/features/notificationButton';
 import { getRouteArticleCreate } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button as ButtonDeprecated, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 import cls from './Navbar.module.scss';
-import { ToggleFeaturesComponent } from '@/shared/lib/features';
+import { toggleFeatures, ToggleFeaturesComponent } from '@/shared/lib/features';
+import { Button } from '@/shared/ui/redesigned/Button';
 
 interface NavbarProps {
     className?: string;
@@ -70,16 +71,37 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         );
     }
 
+    const navbarCls = toggleFeatures({
+        name: 'isAppRedesigned',
+        on: () => cls.NavbarRedesigned,
+        off: () => cls.Navbar,
+    });
+
     return (
-        <header className={classNames(cls.Navbar, {}, [className])}>
-            <Button
-                theme={ButtonTheme.CLEAR_INVERTED}
-                className={cls.links}
-                onClick={onShowModal}
-                data-testid="loginButton"
-            >
-                {t('Войти')}
-            </Button>
+        <header className={classNames(navbarCls, {}, [className])}>
+            <ToggleFeaturesComponent
+                feature="isAppRedesigned"
+                on={(
+                    <Button
+                        variant="clear"
+                        className={cls.links}
+                        onClick={onShowModal}
+                        data-testid="loginButton"
+                    >
+                        {t('Войти')}
+                    </Button>
+                )}
+                off={(
+                    <ButtonDeprecated
+                        theme={ButtonTheme.CLEAR_INVERTED}
+                        className={cls.links}
+                        onClick={onShowModal}
+                        data-testid="loginButton"
+                    >
+                        {t('Войти')}
+                    </ButtonDeprecated>
+                )}
+            />
             {isAuthModal && (
                 <LoginModal
                     isOpen={isAuthModal}
