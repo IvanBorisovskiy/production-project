@@ -18,7 +18,7 @@ import { ToggleFeaturesComponent } from '@/shared/lib/features';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Input } from '@/shared/ui/redesigned/Input';
 import { Button } from '@/shared/ui/redesigned/Button';
-import { useForceUpdate } from '@/shared/lib/render/forceUpdate';
+import { useForceUpdate } from '@/shared/lib/render/ForceUpdate';
 
 export interface LoginFormProps {
     className?: string;
