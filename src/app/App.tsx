@@ -7,9 +7,9 @@ import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { PageLoader } from '@/widgets/PageLoader';
 import { ToggleFeaturesComponent } from '@/shared/lib/features';
-import { MainLayout } from '@/shared/layouts';
+import { AppLoaderLayout, MainLayout } from '@/shared/layouts';
+import { PageLoader } from '@/widgets/PageLoader';
 
 function App() {
     const { theme } = useTheme();
@@ -23,7 +23,18 @@ function App() {
     }, [dispatch, inited]);
 
     if (!inited) {
-        return <PageLoader />;
+        return (
+            <div
+                id="app"
+                className={classNames('app_redesigned', {}, [theme])}
+            >
+                <ToggleFeaturesComponent
+                    feature="isAppRedesigned"
+                    on={<AppLoaderLayout />}
+                    off={<PageLoader />}
+                />
+            </div>
+        );
     }
 
     return (
