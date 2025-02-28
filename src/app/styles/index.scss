@@ -23,7 +23,7 @@
 }
 
 *::-webkit-scrollbar {
-    width: 12px;               /* ширина scrollbar */
+    width: 11px;               /* ширина scrollbar */
     height: 8px;
 }
 
@@ -33,8 +33,7 @@
 
 *::-webkit-scrollbar-thumb {
     background-color: var(--icon-redesigned);    /* цвет плашки */
-    border-radius: 20px;       /* закругления плашки */
-    border: 1px solid var(--accent-redesigned);  /* padding вокруг плашки */
+    border-radius: 38px;       /* закругления плашки */
 }
 
 .app *::-webkit-scrollbar {

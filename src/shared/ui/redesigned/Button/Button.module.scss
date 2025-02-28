@@ -50,7 +50,7 @@
     &.success {
         background: var(--save-redesigned);
     }
-    
+
     &.error {
         background: var(--cancel-redesigned);
     }
@@ -61,24 +61,24 @@
     border: 1px solid var(--icon-redesigned);
     border-radius: 16px;
 
+    &.success {
+        border: 1px solid var(--save-redesigned);
+    }
+
+    &.error {
+        border: 1px solid var(--cancel-redesigned);
+    }
+
     &:hover {
         border: 1px solid var(--accent-redesigned);
 
         &.success {
             border: 1px solid var(--accent-redesigned);
         }
-        
+
         &.error {
             border: 1px solid var(--accent-redesigned);
         }
-    }
-    
-    &.success {
-        border: 1px solid var(--save-redesigned);
-    }
-    
-    &.error {
-        border: 1px solid var(--cancel-redesigned);
     }
 }
 

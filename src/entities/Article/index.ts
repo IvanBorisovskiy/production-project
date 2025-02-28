@@ -1,5 +1,5 @@
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
-export { getArticleDetailsData } from './model/selectors/ArticleDetails';
+export { getArticleDetailsData, getArticleDetailsIsLoading } from './model/selectors/ArticleDetails';
 
 export type {
     Article,
