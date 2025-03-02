@@ -2,7 +2,6 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './ArticleAdditionalInfo.module.scss';
 import { User } from '@/entities/User';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
@@ -37,7 +36,7 @@ export const ArticleAdditionalInfo = memo((props: ArticleAdditionalInfoProps) =>
 
     return (
         <VStack
-            className={classNames(cls.articleAdditionalInfo, {}, [className])}
+            className={classNames('', {}, [className])}
             gap="32"
         >
             <HStack gap="8">

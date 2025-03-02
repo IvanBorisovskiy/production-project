@@ -69,7 +69,7 @@ export const RatingCard = memo((props: RatingProps) => {
                         title={feedbackTitle}
                     />
                     <Input
-                        data-testId="RatingCard.Input"
+                        data-testid="RatingCard.Input"
                         value={feedback}
                         onChange={setFeedback}
                         placeholder={t('Ваш отзыв')}
@@ -82,7 +82,7 @@ export const RatingCard = memo((props: RatingProps) => {
                         title={feedbackTitle}
                     />
                     <InputDeprecated
-                        data-testId="RatingCard.Input"
+                        data-testid="RatingCard.Input"
                         value={feedback}
                         onChange={setFeedback}
                         placeholder={t('Ваш отзыв')}
@@ -111,14 +111,14 @@ export const RatingCard = memo((props: RatingProps) => {
                             on={(
                                 <HStack max gap="16" justify="end">
                                     <Button
-                                        data-testId="RatingCard.Close"
+                                        data-testid="RatingCard.Close"
                                         onClick={cancelHandler}
                                         variant="outline"
                                     >
                                         {t('Закрыть')}
                                     </Button>
                                     <Button
-                                        data-testId="RatingCard.Send"
+                                        data-testid="RatingCard.Send"
                                         onClick={acceptHandler}
                                     >
                                         {t('Отправить')}
@@ -128,14 +128,14 @@ export const RatingCard = memo((props: RatingProps) => {
                             off={(
                                 <HStack max gap="16" justify="end">
                                     <ButtonDeprecated
-                                        data-testId="RatingCard.Close"
+                                        data-testid="RatingCard.Close"
                                         onClick={cancelHandler}
                                         theme={ButtonTheme.OUTLINE_RED}
                                     >
                                         {t('Закрыть')}
                                     </ButtonDeprecated>
                                     <ButtonDeprecated
-                                        data-testId="RatingCard.Send"
+                                        data-testid="RatingCard.Send"
                                         onClick={acceptHandler}
                                     >
                                         {t('Отправить')}
@@ -181,13 +181,13 @@ export const RatingCard = memo((props: RatingProps) => {
                     border
                     padding="24"
                     maxWidth
-                    data-testId="RatingCard"
+                    data-testid="RatingCard"
                 >
                     {content}
                 </Card>
             )}
             off={(
-                <CardDeprecated className={className} maxWidth data-testId="RatingCard">
+                <CardDeprecated className={className} maxWidth data-testid="RatingCard">
                     {content}
                 </CardDeprecated>
             )}

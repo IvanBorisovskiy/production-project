@@ -50,21 +50,21 @@ const AddCommentForm = (props: AddCommentFormProps) => {
                 on={(
                     <Card padding="24" border maxWidth>
                         <HStack
-                            data-testId="Article.CommentForm"
+                            data-testid="Article.CommentForm"
                             max
                             justify="between"
                             gap="16"
                             className={classNames(cls.addCommentFormRedesigned, {}, [className])}
                         >
                             <Input
-                                data-testId="CommentFormInput"
+                                data-testid="CommentFormInput"
                                 placeholder={t('Введите текст комментария')}
                                 onChange={onCommentTextChange}
                                 value={text}
                                 className={cls.input}
                             />
                             <Button
-                                data-testId="CommentFormButton"
+                                data-testid="CommentFormButton"
                                 variant="outline"
                                 onClick={onSendHandler}
                             >
@@ -75,20 +75,20 @@ const AddCommentForm = (props: AddCommentFormProps) => {
                 )}
                 off={(
                     <HStack
-                        data-testId="Article.CommentForm"
+                        data-testid="Article.CommentForm"
                         max
                         justify="between"
                         className={classNames(cls.addCommentForm, {}, [className])}
                     >
                         <InputDeprecated
-                            data-testId="CommentFormInput"
+                            data-testid="CommentFormInput"
                             placeholder={t('Введите текст комментария')}
                             onChange={onCommentTextChange}
                             value={text}
                             className={cls.input}
                         />
                         <ButtonDeprecated
-                            data-testId="CommentFormButton"
+                            data-testid="CommentFormButton"
                             theme={ButtonTheme.OUTLINE}
                             onClick={onSendHandler}
                         >

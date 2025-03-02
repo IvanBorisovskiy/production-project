@@ -70,7 +70,7 @@ describe('app/route/AppRouter', () => {
     });
 
     test('Доступ к закрытой странице для авторизованного пользователя', async () => {
-        componentRender(<AppRouter />, {
+        await componentRender(<AppRouter />, {
             route: getRouteProfile('1'),
             initialState: DataTestUser,
         });

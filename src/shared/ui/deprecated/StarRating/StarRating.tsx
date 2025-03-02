@@ -66,17 +66,17 @@ export const StarRating = memo((props: StarRatingProps) => {
                     width: size,
                     height: size,
                     Svg: StarIcon,
-                    key: starNumber,
                     onMouseLeave: onLeave,
                     onMouseEnter: onHover(starNumber),
                     onClick: onClick(starNumber),
-                    'data-testId': `StarRating.${starNumber}`,
+                    'data-testid': `StarRating.${starNumber}`,
                     'data-selected': currentStarsCount >= starNumber,
                 };
 
                 return (
                     <ToggleFeaturesComponent
                         feature="isAppRedesigned"
+                        key={starNumber}
                         on={(
                             <Icon
                                 {...commonProps}

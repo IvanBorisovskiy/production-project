@@ -12,7 +12,7 @@ export function useRouteChange() {
                 setAppRoute(route);
             }
         });
-    }, [location]);
+    }, [location.pathname]);
 
     return appRoute;
 }

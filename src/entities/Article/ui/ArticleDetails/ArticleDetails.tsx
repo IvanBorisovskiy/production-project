@@ -48,7 +48,7 @@ const Deprecated = () => {
                 />
             </HStack>
             <VStack
-                data-testId="ArticleDetails.Info"
+                data-testid="ArticleDetails.Info"
                 gap="4"
                 max
             >
