@@ -133,7 +133,7 @@ export const ProfileCardRedesigned = (props: ProfileCardProps) => {
                         labelClassname={cls.label}
                     />
                     <Input
-                        label={t('Ссылка на аватар: ')}
+                        label={t('Аватар: ')}
                         value={data?.avatar}
                         placeholder={t('Введите ссылку на аватар')}
                         onChange={onChangeAvatar}

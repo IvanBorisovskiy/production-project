@@ -50,5 +50,19 @@
   "Закрыть": "Закрыть",
   "Язык": "EN",
   "{{count}} просмотров_one": "{{count}} view",
-  "{{count}} просмотров_other": "{{count}} views"
+  "{{count}} просмотров_other": "{{count}} views",
+  "Найти": "Search",
+  "Возрастанию": "Ascending",
+  "Убыванию": "Descending",
+  "Дате загрузки": "Upload Date",
+  "Названию": "Name",
+  "Просмотрам": "Views",
+  "Сортировать по:": "Sort by:",
+  "Читать далее...": "Read more...",
+  "Настройки": "Settings",
+  "Настройки пользователя": "User settings",
+  "Новый": "New",
+  "Старый": "Old",
+  "Вариант интерфейса: ": "Interface option: "
 }
+

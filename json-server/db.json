@@ -824,14 +824,14 @@
     },
     {
       "id": "2",
-      "first": "asd",
-      "lastname": "d",
-      "age": 123,
+      "first": "Ivan",
+      "lastname": "Borisovskiy",
+      "age": 20,
       "currency": "RUB",
       "country": "Belarus",
-      "city": "asd",
-      "username": "asd",
-      "avatar": "asdasdasd"
+      "city": "Moscow",
+      "username": "BANEK",
+      "avatar": "."
     },
     {
       "id": "4",
