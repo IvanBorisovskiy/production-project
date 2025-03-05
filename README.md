@@ -63,8 +63,6 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 3) Скриншотное тестирование с loki `npm run test:ui`
 4) e2e тестирование с Cypress `npm run test:e2e`
 
-Подробнее о тестах - [документация тестирование](/docs/tests.md)
-
 ----
 
 ## Линтинг
@@ -95,8 +93,6 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 
 Запустить сторибук можно командой:
 - `npm run storybook`
-
-Подробнее о [Storybook](/docs/storybook.md)
 
 Пример:
 
